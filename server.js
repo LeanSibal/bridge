@@ -1,16 +1,17 @@
-var server = require('http').createServer();
+var app = require('express')();
+var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
 
-io.on('connection', function(connection){
+io.on('connection', function(socket){
 	console.log({
-		'Connection' : connection.id
+		'Connection' : socket.id
 	});
-	connection.on('event', function(data){
-		console.log('Event');
-	});
-	connection.on('disconnect', function(){
-		console.log('Disconnected');
+	socket.on('event',function(data){
+		console.log({
+			'event' : data
+		});
+		socket.broadcast.emit('hello');
 	});
 });
 server.listen(3000);

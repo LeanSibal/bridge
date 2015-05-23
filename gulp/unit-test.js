@@ -8,4 +8,7 @@ gulp.task('Unit Testing',function(){
 			'Socket Response' : response
 		});
 	});
+	socket.emit('event',{
+		'foo': 'bar'
+	});
 });
