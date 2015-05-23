@@ -3,7 +3,8 @@
   "description": "Open source chat server",
   "dependencies": {
     "socket.io": "latest",
-    "http": "latest"
+    "http": "latest",
+    "socket.io-client": "~1.3.5"
   },
   "devDependencies": {
     "gulp": "~3.8.11",
