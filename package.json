@@ -1,0 +1,12 @@
+{
+  "name": "wallabee",
+  "description": "Open source chat server",
+  "dependencies": {
+    "socket.io": "latest",
+    "http": "latest"
+  },
+  "devDependencies": {
+    "gulp": "~3.8.11",
+    "gulp-nodemon": "~2.0.3"
+  }
+}
